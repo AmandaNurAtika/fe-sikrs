@@ -1,73 +1,62 @@
-# 🚀 Setup Project Frontend Laravel & Backend CodeIgniter dengan Laragon
-Panduan ini menjelaskan langkah-langkah untuk menjalankan proyek frontend Laravel yang terhubung dengan backend CodeIgniter 4 menggunakan Laragon.
+# 🚀 SI-KRS Frontend - Laravel + Tailwind CSS
+Ini adalah proyek antarmuka pengguna (frontend) berbasis Laravel 10 dan Tailwind CSS yang dirancang untuk terhubung dengan backend REST API (dibangun dengan CodeIgniter 4). Aplikasi ini digunakan untuk mengelola data Mahasiswa, Program Studi (Prodi), dan Kelas.
 
-### Langkah 1: Clone Project Backend (CodeIgniter 4)
-1. Buka terminal pilihanmu (CMD, Git Bash, atau terminal di VS Code).
+- SI-KRS Backend (GitHub)[https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend]
+- Database SQL: SI-KRS Database (GitHub)[https://github.com/WindyAnggitaPutri/SI_KRS_Database]
 
-2. Arahkan ke direktori Laragon, biasanya di:
+# ⚙ Teknologi
+- Laravel 10
+- Tailwind CSS
+- Laravel HTTP Client (untuk konsumsi API)
+- Vite (build asset frontend)
+- REST API (CodeIgniter 4)
+
+# 🧩 Struktur Sistem
+Frontend Laravel ini tidak menyimpan data ke database lokal. Semua proses Create, Read, Update, dan Delete dilakukan melalui REST API backend CodeIgniter.
+
+# 🚀 SETUP BACKEND
+1. Clone Repository BE
+- git clone https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend.git
+- cd nama-file
+2. Install Dependency CodeIgniter
+composer install
+3. Copy File Environment
+cp .env.example .env
+4. Menjalankan CodeIgniter
+php spark serve
+5. Cek EndPoint menggunakan Postman
+Kelas :
+- GET → http://localhost:8080/kelas / http://localhost:8080/kelas/{id}
+- POST → http://localhost:8080/kelas
+- PUT → http://localhost:8080/kelas/{id}
+- DELETE → http://localhost:8080/kelas/{id}
+Prodi :
+- GET → http://localhost:8080/prodi / http://localhost:8080/prodi/{id}
+- POST → http://localhost:8080/prodi
+- PUT → http://localhost:8080/prodi/{id}
+- DELETE → http://localhost:8080/prodi/{id}
+
+# 🚀 SETUP FRONTEND
+1. Install Laravel
+Install di CMD atau Terminal
 ```
-cd C:\laragon\www
+composer create-priject laravel/laravel nama-project
 ```
-3. Clonning repository backend
-```
-git clone https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend.git
-```
-4. Masuk ke folder backend
-```
-cd backend
-```
-5. Jalankan perintah
+
+2. Install Dependency Laravel
 ```
 composer install
 ```
+4. Copy File Environment
+```
+cp .env.example .env
+```
+6. Set .env untuk Non-Database App
+```
+APP_NAME=Laravel
+APP_URL=http://localhost:8000
+SESSION_DRIVER=file
+```
 
-### Langkah 2: Setup Database & Uji Koneksi API Backend
-1. Import Database
-Unduh file database dari repo berikut:
-Database Sistem KRS[https://github.com/WindyAnggitaPutri/SI_KRS_Database]
-
-2.Buat database baru dengan nama "sikrs"
-3. Import file databse yang telah didownload
-4. Pastikan Backend berjalan
-```
-php spark serve
-
-```
-5. Buka postman dan uji endpoint nya
-```
-http://localhost:8080/
-```
-Kelas:
-GET → http://localhost:8080/kelas / http://localhost:8080/kelas/{id}
-POST → http://localhost:8080/kelas
-PUT → http://localhost:8080/kelas/{id}
-DELETE → http://localhost:8080/kelas/{id}
-
-Prodi:
-GET → http://localhost:8080/prodi / http://localhost:8080/prodi/{id}
-POST → http://localhost:8080/prodi
-PUT → http://localhost:8080/prodi/{id}
-DELETE → http://localhost:8080/prodi/{id}
-
-# 🚀 Membuat Project Frontend Laravel dengan Laragon
-Berikut ini adalah panduan langkah demi langkah untuk membuat project frontend Laravel menggunakan Laragon.
-Prasyarat Sebelum memulai, pastikan sudah menginstal:
-- Laragon
-- Composer
-- Git 
-
-
-### Langkah-langkah
-1. Buka Laragon
-Jalankan aplikasi Laragon dan pastikan Apache dan MySQL sudah berjalan.
-2. Buka Terminal Laragon
-Klik kanan pada ikon Laragon di system tray → pilih Terminal.
-3. Masuk ke Direktori www
-```
-cd nama file
-```
-4. Buat project laravel baru
-```
-composer create-project laravel/laravel namafile
-```
-5. 
+8. Cara Menjalankan Laravel server
+php artisan serve
