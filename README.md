@@ -1,8 +1,8 @@
 # 🚀 SI-KRS Frontend - Laravel + Tailwind CSS
 Ini adalah proyek antarmuka pengguna (frontend) berbasis Laravel 10 dan Tailwind CSS yang dirancang untuk terhubung dengan backend REST API (dibangun dengan CodeIgniter 4). Aplikasi ini digunakan untuk mengelola data Mahasiswa, Program Studi (Prodi), dan Kelas.
 
-- SI-KRS Backend (GitHub)[https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend]
-- Database SQL: SI-KRS Database (GitHub)[https://github.com/WindyAnggitaPutri/SI_KRS_Database]
+- SI-KRS Backend[https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend]
+- Database SQL: SI-KRS Database[https://github.com/WindyAnggitaPutri/SI_KRS_Database]
 
 # ⚙ Teknologi
 - Laravel 10
@@ -16,15 +16,25 @@ Frontend Laravel ini tidak menyimpan data ke database lokal. Semua proses Create
 
 # 🚀 SETUP BACKEND
 1. Clone Repository BE
-- git clone https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend.git
+```
+git clone https://github.com/kristiandimasadiwicaksono/SI-KRS-Backend.git
+```
+```
 - cd nama-file
+```
 2. Install Dependency CodeIgniter
+``
 composer install
-3. Copy File Environment
+``
+4. Copy File Environment
+```
 cp .env.example .env
-4. Menjalankan CodeIgniter
+```
+6. Menjalankan CodeIgniter
+```
 php spark serve
-5. Cek EndPoint menggunakan Postman
+```
+8. Cek EndPoint menggunakan Postman
 - Kelas :
 ```
 - GET → http://localhost:8080/kelas / http://localhost:8080/kelas/{id}
