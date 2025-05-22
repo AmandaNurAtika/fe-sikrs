@@ -25,16 +25,20 @@ cp .env.example .env
 4. Menjalankan CodeIgniter
 php spark serve
 5. Cek EndPoint menggunakan Postman
-Kelas :
+- Kelas :
+```
 - GET → http://localhost:8080/kelas / http://localhost:8080/kelas/{id}
 - POST → http://localhost:8080/kelas
 - PUT → http://localhost:8080/kelas/{id}
 - DELETE → http://localhost:8080/kelas/{id}
-Prodi :
+```
+- Prodi :
+```
 - GET → http://localhost:8080/prodi / http://localhost:8080/prodi/{id}
 - POST → http://localhost:8080/prodi
 - PUT → http://localhost:8080/prodi/{id}
 - DELETE → http://localhost:8080/prodi/{id}
+```
 
 # 🚀 SETUP FRONTEND
 1. Install Laravel
