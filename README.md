@@ -1,7 +1,7 @@
-🔧 Setup Project Frontend Laravel & Backend CodeIgniter dengan Laragon
+# 🚀 Setup Project Frontend Laravel & Backend CodeIgniter dengan Laragon
 Panduan ini menjelaskan langkah-langkah untuk menjalankan proyek frontend Laravel yang terhubung dengan backend CodeIgniter 4 menggunakan Laragon.
 
-🧩 Langkah 1: Clone Project Backend (CodeIgniter 4)
+### Langkah 1: Clone Project Backend (CodeIgniter 4)
 1. Buka terminal pilihanmu (CMD, Git Bash, atau terminal di VS Code).
 
 2. Arahkan ke direktori Laragon, biasanya di:
@@ -21,7 +21,7 @@ cd backend
 composer install
 ```
 
-🗃️ Langkah 2: Setup Database & Uji Koneksi API Backend
+### Langkah 2: Setup Database & Uji Koneksi API Backend
 1. Import Database
 Unduh file database dari repo berikut:
 Database Sistem KRS[https://github.com/WindyAnggitaPutri/SI_KRS_Database]
@@ -49,18 +49,15 @@ POST → http://localhost:8080/prodi
 PUT → http://localhost:8080/prodi/{id}
 DELETE → http://localhost:8080/prodi/{id}
 
-
-
-📦 Membuat Project Frontend Laravel dengan Laragon
+# 🚀 Membuat Project Frontend Laravel dengan Laragon
 Berikut ini adalah panduan langkah demi langkah untuk membuat project frontend Laravel menggunakan Laragon.
-
-🛠️ Prasyarat
-Sebelum memulai, pastikan sudah menginstal:
+Prasyarat Sebelum memulai, pastikan sudah menginstal:
 - Laragon
 - Composer
 - Git 
 
-🚀 Langkah-langkah
+
+### Langkah-langkah
 1. Buka Laragon
 Jalankan aplikasi Laragon dan pastikan Apache dan MySQL sudah berjalan.
 2. Buka Terminal Laragon
